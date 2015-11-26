@@ -8,7 +8,13 @@
 #ifndef LECTUREPHOTO_H
 #define	LECTUREPHOTO_H
 
+#include<vector>
+#include<cstdlib>
 
+using namespace std;
+
+vector<int> lecturePhoto(string nomFichier);
+void ecriturePhoto(string nouveauFicher);
 
 #endif	/* LECTUREPHOTO_H */
 
