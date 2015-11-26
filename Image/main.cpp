@@ -7,6 +7,7 @@
 
 #include<iostream>
 #include"lecturePhoto.h"
+#include <ctime>
 
 using namespace std;
 
@@ -14,14 +15,17 @@ using namespace std;
  * 
  */
 int main() {
-
-    string nomFichier = "lena.pgm";
-    vector<int> res;
-    res=lecturePhoto(nomFichier);
     
-    for(int i=0;i<res.size();i++){
+    srand(time(NULL));
+
+    vector<int> res;
+    res=lecturePhoto("lena.pgm");       // transformation de l'image en vecteur
+    
+    for(int i=0;i<res.size();i++){      // affichage pour vérifier
         cout << res[i]<<" ";
     }
+    
+    ecriturePhoto("photo.pgm");         // génération de l'image aléatoire
     
     return 0;
 }
