@@ -5,15 +5,24 @@
  * Created on 26 novembre 2015, 10:08
  */
 
-#include <cstdlib>
+#include<iostream>
+#include"lecturePhoto.h"
 
 using namespace std;
 
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main() {
 
+    string nomFichier = "lena.pgm";
+    vector<int> res;
+    res=lecturePhoto(nomFichier);
+    
+    for(int i=0;i<res.size();i++){
+        cout << res[i]<<" ";
+    }
+    
     return 0;
 }
 
